@@ -1,0 +1,22 @@
+LampsAdapter.Endpoints=tcp -h 127.0.0.2 -p 10000 -z -t 10000 : udp -h 127.0.0.2 -p 10000 -z
+OtherDevicesAdapter.Endpoints=tcp -h 127.0.0.3 -p 10000 -z -t 10000 : udp -h 127.0.0.3 -p 10000 -z
+
+LampsAdapter.ThreadPool.Size=5
+LampsAdapter.ThreadPool.SizeMax=8
+OtherDevicesAdapter.ThreadPool.Size=1
+OtherDevicesAdapter.ThreadPool.SizeMax=8
+
+#
+# Warn about connection exceptions
+#
+Ice.Warn.Connections=1
+
+#
+# Network Tracing
+#
+# 0 = no network tracing
+# 1 = trace connection establishment and closure
+# 2 = like 1, but more detailed
+# 3 = like 2, but also trace data transfer
+#
+Ice.Trace.Network=2

@@ -1,0 +1,9 @@
+LampsServer.Proxy=serverInfo/deviceInfoProvider : tcp -h 127.0.0.2 -p 10000 -z : udp -h 127.0.0.2 -p 10000 -z
+OtherDevicesServer.Proxy=serverInfo/deviceInfoProvider : tcp -h 127.0.0.3 -p 10000 -z : udp -h 127.0.0.3 -p 10000 -z
+
+#
+# Warn about connection exceptions.
+#
+Ice.Warn.Connections=1
+
+Ice.ACM.Timeout=10

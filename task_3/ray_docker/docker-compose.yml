@@ -1,0 +1,9 @@
+services:
+  ray:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: 5G
+    ports:
+      - 8265:8265
+      - 10001:10001

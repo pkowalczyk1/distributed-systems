@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "pl.agh.edu.grpcweb.gen";
+option java_outer_classname = "WebServiceProto";
+
+package webservice;
+
+message NumberType {
+  int64 arg = 1;
+}
+
+message StringType {
+  string value = 1;
+}
+
+message ListArgument {
+  repeated int32 values = 1;
+}
+
+message DoubleResult {
+  double value = 1;
+}
+
+service WebService {
+  rpc Factorial (NumberType) returns (NumberType) {}
+  rpc ToUpperCase (StringType) returns (StringType) {}
+  rpc GetAverage (ListArgument) returns (DoubleResult) {}
+  rpc GenerateRandomNumbers (NumberType) returns (stream NumberType) {}
+}
+
