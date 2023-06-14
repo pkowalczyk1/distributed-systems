@@ -19,7 +19,7 @@ fun main() {
     while (firstType == secondType || firstType !in possibleServiceTypes || secondType !in possibleServiceTypes) {
         println("Give first service type: ")
         firstType = readln()
-        println("Give first service type: ")
+        println("Give second service type: ")
         secondType = readln()
     }
 
