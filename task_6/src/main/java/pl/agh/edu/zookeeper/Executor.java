@@ -1,6 +1,5 @@
 package pl.agh.edu.zookeeper;
 
-import org.apache.zookeeper.AddWatchMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
 
@@ -27,7 +26,7 @@ public class Executor {
         addWatchedEvent();
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException {
         String host = args[0];
         String command = args[1];
         var processExecutor = new ProcessExecutor(command);
